@@ -73,6 +73,7 @@ int main()
                     STATE = 0;
                 }
             }
+	    sleep(0.20);
             printf("Total Time: %d Hours, %d Minutes and %d Seconds\n", hours, minutes, seconds);
         }
     }
