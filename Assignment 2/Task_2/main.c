@@ -33,6 +33,7 @@ int main()
 	for (int k = 0; k < 7; k++)
 	{
 		printf("Process ID: %d and Thread ID: %lu\n", returnedValues[k]->pid, returnedValues[k]->tid);
+		free(returnedValues[k]);
 	}
 
 	return 0;
