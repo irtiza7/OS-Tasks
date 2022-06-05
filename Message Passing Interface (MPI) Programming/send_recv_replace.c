@@ -18,7 +18,8 @@ int main(int argc, char *argv[]) {
     MPI_Sendrecv_replace(
         &value, 1, MPI_INT, ((my_id + 1) % num_procs), tag, 
         ((my_id - 1 + num_procs) % num_procs), tag,
-        MPI_COMM_WORLD, &status);
+        MPI_COMM_WORLD, &status
+    );
 
     printf("This is process: %d, I received %d from process %d\n", my_id, value, status.MPI_SOURCE);
 
