@@ -13,11 +13,9 @@ int main(int argc, char *argv[]) {
 
     if(my_id == 0) {
         printf("This is process: %d\n", my_id);
-        // MPI_Barrier(MPI_COMM_WORLD);
     } else if(my_id == 1) {
         printf("This is process: %d\n", my_id);
         sleep(5);
-        // MPI_Barrier(MPI_COMM_WORLD);
     } else if(my_id == 2) {
         printf("This is process: %d\n", my_id);
         sleep(10);
