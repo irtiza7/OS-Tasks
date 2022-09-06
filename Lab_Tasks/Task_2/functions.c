@@ -3,10 +3,6 @@
 
 void sort(int array[], int order)
 {
-    // for (int i = 0; i < 10; i++)
-    // {
-    //     printf("%d", array[i]);
-    // }
     if (order)
     {
         for (int i = 0; i < 10; i++)
