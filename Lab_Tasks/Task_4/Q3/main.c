@@ -1,8 +1,16 @@
+#include <stdio.h>
 #include <unistd.h>
+#include <stdlib.h>
+#include <sys/wait.h>
 
-int execlp(
-    const char *file,
-    const char *arg0,
-    const char *arg1,
-    … const char *argn,
-    NULL);
+int main()
+{
+    if (fork() == 0)
+    {
+        char *program = "fibonacci";
+        char *path = "./fibonacci";
+        char *args[] = {"fibonacci", "15", NULL};
+        execv(path, args);
+    }
+    return 0;
+}
