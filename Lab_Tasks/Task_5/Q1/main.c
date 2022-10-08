@@ -46,37 +46,3 @@ void change_case(char *string)
     }
     printf("Modified String: %s\n", string);
 }
-
-// int main()
-// {
-//     char *send_buffer = "Hi There";
-//     int size = strlen(send_buffer);
-//     // printf("size = %ld\n", size);
-//     // printf("string = %s\n", send_buffer);
-//     char recv_buffer[size];
-
-//     int fd[2];
-//     pipe(fd);
-
-//     if (fork() > 0)
-//     {
-//         printf("Parent Process [ID: %d]\n", getpid());
-//         write(fd[1], send_buffer, size);
-//         close(fd[1]);
-//         close(fd[0]);
-//         wait(NULL);
-//     }
-//     else
-//     {
-//         printf("Child Process [ID: %d]\n", getpid());
-//         read(fd[0], recv_buffer, size);
-//         // receive_buffer[strlen(recv_buffer)] = '\0';
-//         printf("Original String: %s\n", recv_buffer);
-//         // printf("size rec buf = %ld\n", strlen(recv_buffer));
-//         change_case(recv_buffer);
-//         close(fd[0]);
-//         close(fd[1]);
-//         exit(0);
-//     }
-//     return 0;
-// }
